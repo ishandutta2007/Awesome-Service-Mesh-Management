@@ -1,225 +1,149 @@
-# Awesome-Service-Mesh-Management
+![Awesome Service Mesh Management Banner](assets/header-banner.svg)
 
-## Top Service Mesh Management Ecosystem
+# 🌐 Awesome Service Mesh Management
 
+[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
+[![License: MIT](https://img.shields.to/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.to/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Service-Mesh-Management/pulls)
 
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Service-to-Service Communication, mTLS & Traffic Management*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial service mesh platforms** and **open-source projects** that manage service-to-service communication in microservices and Kubernetes environments. These tools provide traffic management, mutual TLS (mTLS), observability, and policy enforcement without changing application code.
-
-
-
-**Examples** include AWS App Mesh, Istio, Linkerd, Consul, Kong Mesh, Traefik Mesh, Solo.io Gloo Mesh, Tetrate Service Express, Open Service Mesh, and Kuma (the category leaders).
-
-
-
-**Open-source emphasis**: Service mesh is one of the strongest open-source domains. **Istio** leads as the most feature-rich mesh, **Linkerd** prioritizes simplicity and performance, **Cilium Service Mesh** brings eBPF-based sidecarless architecture, and **Kuma** provides universal multi-cluster support. **Consul** offers service discovery with mesh capabilities. **Ambient Mesh** represents the future of sidecarless Istio. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[AWS App Mesh](https://aws.amazon.com/app-mesh/)**  
-
-  **AWS's managed service mesh** — Envoy-based with native AWS integration, App Mesh Controller for Kubernetes, and CloudWatch observability. **Best for AWS-centric microservices** .
-
-
-
-- **[Solo.io Gloo Mesh](https://www.solo.io/)**  
-
-  **Enterprise Istio management** — multi-cluster, multi-cloud service mesh with Gloo Mesh Gateway and Gloo Mesh Core . **Best for enterprise Istio deployments at scale** .
-
-
-
-- **[Tetrate Service Express](https://tetrate.io/)**  
-
-  **Enterprise service mesh platform** — Istio-based with multi-cloud, multi-cluster management and zero-trust security . **Best for regulated industries** .
-
-
-
-- **[Kong Mesh](https://konghq.com/)**  
-
-  **Enterprise service mesh** built on Kuma — multi-cluster, multi-cloud with enterprise support, RBAC, and FIPS compliance . **Best for Kong ecosystem users** .
-
-
-
-- **[Consul (HashiCorp)](https://www.consul.io/)**  
-
-  **Service discovery and mesh platform** — Connect for mTLS, intentions for authorization, and multi-datacenter support . **Best for hybrid cloud service networking** .
-
-
-
-- **[Traefik Mesh](https://traefik.io/)**  
-
-  **Simpler service mesh** — based on Traefik proxy, lightweight and easy to deploy . **Best for teams wanting simplicity** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[Istio](https://github.com/istio/istio)**  
-
-  **The most widely adopted service mesh**, Apache-2.0 licensed with **36,000+ GitHub stars** . **The reference implementation for service mesh** — traffic management, mTLS, observability, and policy enforcement . **Sidecar-based architecture** (Envoy) with **Ambient Mesh** (sidecarless) in development . **The most feature-rich mesh** — supports multi-cluster, multi-cloud, and VM workloads . **Best for enterprise-grade service mesh** .
-
-
-
-- **[Linkerd](https://github.com/linkerd/linkerd2)**  
-
-  **The most performant and simplest service mesh**, Apache-2.0 licensed with **10,000+ GitHub stars** . **Rust-based micro-proxy** — significantly lower latency and memory than Istio's Envoy . **The CNCF graduated project** — focused on simplicity and reliability . **Best for teams wanting mesh benefits without complexity** .
-
-
-
-- **[Cilium Service Mesh](https://github.com/cilium/cilium)**  
-
-  **eBPF-based service mesh**, Apache-2.0 licensed with **20,000+ GitHub stars** . **Sidecarless architecture** — uses eBPF for network policy, load balancing, and observability . **The future of service mesh** — eliminates sidecar overhead . **Best for Kubernetes-native networking and security** .
-
-
-
-- **[Kuma](https://github.com/kumahq/kuma)**  
-
-  **Universal service mesh**, Apache-2.0 licensed with **3,500+ GitHub stars** . **Multi-cluster, multi-cloud, and multi-platform** — Kubernetes, VMs, and hybrid . **Built on Envoy** — supports both sidecar and gateway modes . **The foundation for Kong Mesh** . **Best for universal service mesh across environments** .
-
-
-
-- **[Consul](https://github.com/hashicorp/consul)**  
-
-  **Service discovery and service mesh**, MPL-2.0 licensed with **28,000+ GitHub stars** . **Connect for mTLS** — automatic service-to-service encryption . **Intentions for authorization** — define which services can communicate . **Multi-datacenter and hybrid cloud** . **Best for service discovery with mesh capabilities** .
-
-
-
-- **[Open Service Mesh (OSM)](https://github.com/openservicemesh/osm)**  
-
-  **Lightweight, extensible service mesh**, Apache-2.0 licensed with **2,500+ GitHub stars** . **SMI-compliant** — Service Mesh Interface standard . **Simple to install and operate** . **Note**: Archived in 2023 — recommended to migrate to Istio or Linkerd . **Best for historical reference** .
-
-
-
-- **[Traefik Mesh](https://github.com/traefik/mesh)**  
-
-  **Simpler service mesh**, MIT licensed with **2,000+ GitHub stars** . **Based on Traefik proxy** — lightweight and easy to deploy . **Non-invasive** — no sidecar injection required for basic functionality . **Best for teams wanting simplicity** .
-
-
-
-- **[Kube-router](https://github.com/cloudnativelabs/kube-router)**  
-
-  **Kubernetes network router with service proxy**, Apache-2.0 licensed . **IPVS-based service proxy** — alternative to kube-proxy . **Best for Kubernetes networking** .
-
-
-
-- **[Nginx Service Mesh](https://github.com/nginxinc/nginx-service-mesh)**  
-
-  **NGINX-based service mesh**, Apache-2.0 licensed . **NGINX Plus integration** — commercial support available . **Best for NGINX users** .
-
-
-
-### Ambient & Sidecarless Mesh
-
-
-
-- **[Istio Ambient Mesh](https://istio.io/latest/docs/ambient/)**  
-
-  **Sidecarless service mesh from Istio**, Apache-2.0 licensed . **Zero-trust built-in** — no sidecar overhead . **ztunnel for L4 and waypoint proxies for L7** . **The future of Istio** — simplified operations with reduced resource usage . **Best for teams wanting mesh without sidecar complexity** .
-
-
-
-- **[Cilium Service Mesh](https://github.com/cilium/cilium)** — Already listed. **eBPF-based sidecarless mesh** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Consul Connect** — Service mesh within Consul .
-
-- **AWS App Mesh Controller** — Kubernetes controller for App Mesh .
-
-- **Gloo Mesh Core** — Open-source Istio management from Solo.io .
-
-- **Tetrate Istio Distro** — Open-source Istio distribution .
-
-- **Kiali** — Istio observability console .
-
-- **Jaeger** — Distributed tracing for mesh .
-
-- **Prometheus** — Metrics for mesh .
-
-- **Grafana** — Dashboards for mesh .
-
-- **OpenTelemetry** — Vendor-neutral instrumentation .
-
-
-
-**Frameworks for building custom service mesh solutions**: Choose based on complexity tolerance and performance requirements. **Istio** for maximum features and enterprise-grade mesh . **Linkerd** for simplicity and performance with Rust-based proxy . **Cilium Service Mesh** for eBPF-based sidecarless architecture . **Kuma** for universal multi-cluster, multi-platform mesh . **Consul** for service discovery with mesh capabilities . **Istio Ambient Mesh** for sidecarless future . Note that true enterprise service mesh with managed control planes, multi-cluster federation, and vendor-supported SLAs (Gloo Mesh, Tetrate, Kong Mesh) remains primarily commercial territory; open-source stacks provide strong traffic management, mTLS, and observability foundations that require integration for complete enterprise deployment.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Service mesh platforms manage critical service-to-service communication and certificates. Self-hosted solutions require proper security hardening, certificate management, and high-availability configuration.
-
-- **Service mesh adds operational complexity** — sidecar injection, control plane management, and traffic policies require expertise. Evaluate whether your organization has the capacity before adopting.
-
-- **Performance overhead varies** — Linkerd's Rust proxy has lower latency than Istio's Envoy sidecar . Cilium's eBPF approach eliminates sidecar overhead entirely . Benchmark before production deployment.
-
-- **Open Service Mesh (OSM) is archived** — migrate to Istio or Linkerd for active development .
-
-- The open-source ecosystem provides strong traffic management, mTLS, and observability foundations, but **managed control planes, multi-cluster federation, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+**Curated Directory of Commercial SaaS Platforms & Open-Source Tools for Microservices, mTLS Encryption & Kubernetes Traffic Engineering.**
 
 ---
 
+## 📖 Overview & SEO Summary
 
+A **Service Mesh** is a dedicated infrastructure layer for facilitating service-to-service communications between microservices, container workloads, and cloud environments. By delegating traffic routing, mutual TLS (mTLS) security, retry logic, load balancing, and distributed tracing to sidecar proxies (e.g., Envoy) or eBPF kernel modules, platform engineers and SREs gain operational transparency and zero-trust security without modifying application code.
 
-**Made for platform engineers, SREs, and organizations seeking service mesh sovereignty.**  
+This repository serves as an authoritative guide comparing enterprise commercial SaaS vendors and leading open-source projects across Kubernetes, multi-cloud, and edge architectures.
 
-Let's make service mesh management more open, transparent, and performant.
+---
+
+## 📋 Table of Contents
+
+- [📊 Market Overview & Industry Structure](#-market-overview--industry-structure)
+- [🏢 SaaS & Hosted Service Mesh Platforms](#-saas--hosted-service-mesh-platforms)
+- [⚡ Open-Source Service Mesh Projects](#-open-source-service-mesh-projects)
+- [🔬 Architecture Paradigms: Sidecar vs. Sidecarless (eBPF & Ambient)](#-architecture-paradigms-sidecar-vs-sidecarless-ebpf--ambient)
+- [🛠️ Observability & Ecosystem Add-ons](#️-observability--ecosystem-add-ons)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer & Evaluation Criteria](#️-disclaimer--evaluation-criteria)
+
+---
+
+## 📊 Market Overview & Industry Structure
+
+> 📈 **Market Size & Dynamics**: The global **Service Mesh & Microservices Networking Software Market** was valued at **~$1.79B – $2.20B in 2025/2026** and is projected to expand to **$6.33B+ by 2030** at a **Compound Annual Growth Rate (CAGR) of ~28.7% – 32.6%**.
+>
+> 🧩 **Market Fragmentation**: The market is **moderately fragmented**. It features cloud hyperscalers (AWS), specialized enterprise networking unicorns (HashiCorp/IBM, Kong, Solo.io, Tetrate), and vendor-neutral open-source foundations (CNCF). No single vendor exercises a "winner-take-all" monopoly, as enterprise environments increasingly demand multi-cloud portability and CNCF-governed standards (Istio, Linkerd, Cilium).
+
+---
+
+## 🏢 SaaS & Hosted Service Mesh Platforms
+
+The table below lists top commercial SaaS and managed enterprise service mesh platforms, **sorted by Company Size (Revenue / Valuation) in descending order**.
+
+| 🏢 Platform / Product | 💼 Company Size & Valuation | 📝 Description & Best For | 💵 Specific Starting Pricing | 🎁 Free Tier / Trial Limit |
+| :--- | :--- | :--- | :--- | :--- |
+| 🚀 **[AWS App Mesh](https://aws.amazon.com/app-mesh/)** | **~$2.1T+ Market Cap**<br>*(AWS Rev: ~$100B+/yr)* | AWS managed Envoy service mesh. Deeply integrated with Amazon EKS, ECS, Fargate, & CloudWatch. **Best for AWS-native microservices.** | `$0.00/hr` for control plane *(Pay only for underlying EC2/Fargate/EKS infrastructure)* | **100% Free Control Plane** forever *(Includes 12-mo AWS Free Tier: 750 hrs/mo EC2 & 5GB CloudWatch)* |
+| 🔐 **[Consul (HashiCorp)](https://www.consul.io/)** | **$6.4 Billion**<br>*(Acquired by IBM; IBM Cap: ~$210B+)* | Service discovery, mTLS service mesh (Connect), intentions-based authorization, & multi-datacenter federation. | `$0.027/node/hour` (~$19.71/node/month) for HCP Consul Pay-As-You-Go; Enterprise from `$50/node/month` | **$50 Free Trial Credits** on HCP Consul *(Equivalent to ~2,500 node-hours or 30 days for small clusters)* |
+| 🦍 **[Kong Mesh](https://konghq.com/)** | **$1.4 Billion Valuation**<br>*(Unicorn, $175M+ Raised)* | Enterprise multi-zone service mesh built on CNCF Kuma. Includes RBAC, enterprise GUI, & FIPS 140-2 compliance. **Best for Kong API ecosystem users.** | `$250/month` *(Kong Konnect Team Tier)* or `$0.05/node/hour` for enterprise usage | **14-Day Free Trial** on Kong Konnect Enterprise *(Up to 5 control planes & 20 data plane nodes)* |
+| 🔮 **[Solo.io Gloo Mesh](https://www.solo.io/)** | **$1.0 Billion Valuation**<br>*(Series C Unicorn)* | Enterprise Istio management & multi-cluster federation platform with Gloo Gateway & Gloo Network Core. **Best for large-scale enterprise Istio.** | `$30/node/month` or `$500/cluster/month` for basic enterprise core tier | **30-Day Free Trial License** *(Full enterprise feature access for up to 5 clusters)* |
+| 🛡️ **[Tetrate Service Express](https://tetrate.io/)** | **~$500 Million Valuation**<br>*(Series B $52.5M, Total: $84M+)* | Enterprise Istio platform focused on zero-trust security, multi-cloud governance, & seamless SLA compliance. **Best for regulated sectors.** | `$0.06/node/hour` (~$43.80/node/month) via AWS Marketplace or `$3,500/cluster/year` | **30-Day Free Trial** via AWS Marketplace / Tetrate Cloud *(Up to 10 nodes & 2 Kubernetes clusters)* |
+| 🚦 **[Traefik Mesh Enterprise](https://traefik.io/)** | **~$120 Million Valuation**<br>*(Series B $32M, Total: $43M)* | Lightweight, SMI-compliant service mesh built on Traefik proxy. Simple, non-invasive deployment without Envoy complexity. | `$14/instance/month` *(Traefik Hub Developer/Team Tier)* or `$0.02/node/hour` | **Free Forever Tier** on Traefik Hub *(Up to 5 microservices / 1 cluster)* or **14-Day Enterprise Trial** |
+
+---
+
+## ⚡ Open-Source Service Mesh Projects
+
+The table below catalogs open-source service mesh projects and cloud-native proxies, **sorted by GitHub Star Count in descending order**. Click any star badge to inspect real-time stargazers!
+
+| 📦 Repository & Project | ⭐ GitHub Stars (Stargazers Link) | 📜 License | 🏗️ Architecture & Core Highlights | 🎯 Primary Use Case |
+| :--- | :--- | :--- | :--- | :--- |
+| 🚦 **[Traefik Proxy](https://github.com/traefik/traefik)** | [![GitHub stars](https://img.shields.to/github/stars/traefik/traefik?style=social)](https://github.com/traefik/traefik/stargazers) | MIT | Go-based modern HTTP reverse proxy and ingress controller with native microservice discovery. | Dynamic ingress routing & microservice API edge proxy |
+| ⛵ **[Istio](https://github.com/istio/istio)** | [![GitHub stars](https://img.shields.to/github/stars/istio/istio?style=social)](https://github.com/istio/istio/stargazers) | Apache-2.0 | CNCF Graduated standard. Envoy sidecar architecture + **Ambient Mesh** (sidecarless L4/L7 ztunnel & waypoint proxies). | Enterprise-grade Kubernetes mTLS, traffic shaping & zero trust |
+| 🔒 **[Consul](https://github.com/hashicorp/consul)** | [![GitHub stars](https://img.shields.to/github/stars/hashicorp/consul?style=social)](https://github.com/hashicorp/consul/stargazers) | BUSL / MPL | Multi-datacenter service discovery, health monitoring, and Connect mTLS service mesh. | Hybrid cloud & multi-region service-to-service discovery |
+| 🛡️ **[Envoy Proxy](https://github.com/envoyproxy/envoy)** | [![GitHub stars](https://img.shields.to/github/stars/envoyproxy/envoy?style=social)](https://github.com/envoyproxy/envoy/stargazers) | Apache-2.0 | CNCF Graduated C++ L7 cloud-native edge and service proxy. The foundation for Istio, Kuma, & App Mesh. | High-performance data plane for modern service meshes |
+| 🐝 **[Cilium](https://github.com/cilium/cilium)** | [![GitHub stars](https://img.shields.to/github/stars/cilium/cilium?style=social)](https://github.com/cilium/cilium/stargazers) | Apache-2.0 | eBPF-based networking, security & sidecarless service mesh. Eliminates sidecar container latency overhead. | eBPF sidecarless Kubernetes networking, security & mesh |
+| 🐟 **[Linkerd2](https://github.com/linkerd/linkerd2)** | [![GitHub stars](https://img.shields.to/github/stars/linkerd/linkerd2?style=social)](https://github.com/linkerd/linkerd2/stargazers) | Apache-2.0 | CNCF Graduated. Ultra-lightweight Rust micro-proxy (`linkerd2-proxy`). Unmatched latency & low memory consumption. | High-performance, low-overhead Kubernetes mTLS & mesh |
+| ⚡ **[BFE Engine](https://github.com/bfenetworks/bfe)** | [![GitHub stars](https://img.shields.to/github/stars/bfenetworks/bfe?style=social)](https://github.com/bfenetworks/bfe/stargazers) | Apache-2.0 | CNCF Sandbox enterprise layer-7 load balancer and traffic management engine written in Go. | Large-scale L7 traffic routing & enterprise load balancing |
+| 🐻 **[Kuma](https://github.com/kumahq/kuma)** | [![GitHub stars](https://img.shields.to/github/stars/kumahq/kuma?style=social)](https://github.com/kumahq/kuma/stargazers) | Apache-2.0 | CNCF Incubating universal Envoy-based mesh. Supports Kubernetes, VMs, bare metal, & multi-zone mesh. | Universal multi-zone mesh across Kubernetes & legacy VMs |
+| 🌐 **[Open Service Mesh (OSM)](https://github.com/openservicemesh/osm)** | [![GitHub stars](https://img.shields.to/github/stars/openservicemesh/osm?style=social)](https://github.com/openservicemesh/osm/stargazers) | Apache-2.0 | SMI-compliant lightweight Envoy mesh *(Archived by CNCF in 2023; preserved for historical reference)*. | Historical SMI specification compliance reference |
+| 🔀 **[Kube-router](https://github.com/cloudnativelabs/kube-router)** | [![GitHub stars](https://img.shields.to/github/stars/cloudnativelabs/kube-router?style=social)](https://github.com/cloudnativelabs/kube-router/stargazers) | Apache-2.0 | Lean Kubernetes networking tool combining IPVS-based service proxy, BGP router, and NetworkPolicy controller. | IPVS high-throughput Kubernetes networking & service proxy |
+| 🕸️ **[Traefik Mesh](https://github.com/traefik/mesh)** | [![GitHub stars](https://img.shields.to/github/stars/traefik/mesh?style=social)](https://github.com/traefik/mesh/stargazers) | MIT | Simpler, non-invasive Kubernetes service mesh powered by Traefik proxies without sidecar injection. | Simpler Kubernetes service mesh for developer teams |
+| 📐 **[SMI Spec](https://github.com/servicemeshinterface/smi-spec)** | [![GitHub stars](https://img.shields.to/github/stars/servicemeshinterface/smi-spec?style=social)](https://github.com/servicemeshinterface/smi-spec/stargazers) | Apache-2.0 | Service Mesh Interface (SMI) specification — standard interfaces for service mesh on Kubernetes. | Standardized Kubernetes service mesh API specification |
+| 🍃 **[Flomesh Pipy](https://github.com/flomesh-io/pipy)** | [![GitHub stars](https://img.shields.to/github/stars/flomesh-io/pipy?style=social)](https://github.com/flomesh-io/pipy/stargazers) | MIT | Programmable modular network proxy written in C++ with JS scripting for cloud, edge, and IoT mesh. | High-performance programmable cloud/edge traffic proxy |
+| 🌉 **[Merbridge](https://github.com/merbridge/merbridge)** | [![GitHub stars](https://img.shields.to/github/stars/merbridge/merbridge?style=social)](https://github.com/merbridge/merbridge/stargazers) | Apache-2.0 | eBPF plugin to accelerate Istio, Linkerd, and Kuma service meshes by bypassing iptables network stack. | eBPF network acceleration for sidecar service meshes |
+| ✈️ **[Aeraki Mesh](https://github.com/aeraki-mesh/aeraki)** | [![GitHub stars](https://img.shields.to/github/stars/aeraki-mesh/aeraki?style=social)](https://github.com/aeraki-mesh/aeraki/stargazers) | Apache-2.0 | Manages non-HTTP layer 7 protocols (Dubbo, Thrift, Redis, Kafka) inside Istio service mesh environments. | L7 non-HTTP protocol governance in Istio service mesh |
+| 🧩 **[NGINX Service Mesh](https://github.com/nginxinc/nginx-service-mesh)** | [![GitHub stars](https://img.shields.to/github/stars/nginxinc/nginx-service-mesh?style=social)](https://github.com/nginxinc/nginx-service-mesh/stargazers) | Apache-2.0 | Lightweight service mesh leveraging NGINX Plus sidecar proxies for traffic management and security. | NGINX-native enterprise Kubernetes service mesh |
+
+---
+
+## 🔬 Architecture Paradigms: Sidecar vs. Sidecarless (eBPF & Ambient)
+
+```mermaid
+flowchart TD
+    subgraph Traditional Sidecar Pattern
+        A1[Pod / Container A] -->|Loopback| S1[Envoy Sidecar Proxy]
+        S1 -->|mTLS Encryption| S2[Envoy Sidecar Proxy]
+        S2 -->|Loopback| B1[Pod / Container B]
+    end
+
+    subgraph Sidecarless eBPF & Ambient Mesh
+        A2[Pod / Container C] -->|eBPF Socket / ztunnel| K[Linux Kernel eBPF L4]
+        K -->|mTLS Tunnel| K2[Linux Kernel eBPF L4]
+        K2 -->|Direct Delivery| B2[Pod / Container D]
+    end
+
+    style S1 fill:#3B82F6,color:#fff
+    style S2 fill:#3B82F6,color:#fff
+    style K fill:#EC4899,color:#fff
+    style K2 fill:#EC4899,color:#fff
+```
+
+### 🔹 Sidecar Architecture (Envoy / Rust Proxy)
+- **Mechanism**: Attaches a dedicated proxy container alongside each application container.
+- **Pros**: Rich L7 traffic policies, granular per-pod isolation, mature ecosystem.
+- **Cons**: Increased memory footprint per pod, network hop latency from `iptables` redirection.
+
+### ⚡ Sidecarless Architecture (eBPF & Istio Ambient)
+- **Mechanism**: Moves L4 connection security (`ztunnel`) and eBPF socket filtering directly into the kernel or node daemon set, using shared waypoint proxies for L7 routing only when required.
+- **Pros**: **Zero application pod modification**, reduced CPU/memory overhead by up to 70%, lower packet latency.
+- **Leaders**: **Cilium Service Mesh** (pure eBPF) & **Istio Ambient Mesh**.
+
+---
+
+## 🛠️ Observability & Ecosystem Add-ons
+
+Complementary open-source tools required for full service mesh telemetry:
+
+- 📊 **[Prometheus](https://github.com/prometheus/prometheus)** — Time-series metrics collection for proxy throughput, latency (P99/P95), and error rates.
+- 📈 **[Grafana](https://github.com/grafana/grafana)** — Visual dashboarding for RED (Rates, Errors, Duration) metrics.
+- 🔍 **[Jaeger Tracing](https://github.com/jaegertracing/jaeger)** — OpenTracing / OpenTelemetry compliant distributed request tracing across microservice hops.
+- 👁️ **[Kiali](https://github.com/kiali/kiali)** — Visual topology console specifically designed for Istio service mesh inspection.
+- 📡 **[OpenTelemetry](https://github.com/open-telemetry/opentelemetry-collector)** — Vendor-neutral telemetry collector for traces, metrics, and logs.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please follow these simple guidelines:
+
+1. **Fork the repository** on GitHub.
+2. Edit `README.md` to add or update entry details.
+3. Ensure pricing, company valuation/revenue, and free tier limits are factual and verified.
+4. Keep descriptions concise (1–2 sentences).
+5. Submit a Pull Request (PR) with a clear title and summary of changes.
+
+---
+
+## ⚖️ Disclaimer & Evaluation Criteria
+
+- This directory is **community-curated** for educational and architectural reference.
+- Service mesh platforms introduce operational overhead (certificate rotation, control plane updates, proxy sidecar memory footprint). Evaluate team capacity and benchmark performance before production deployment.
+- Pricing details, free trial terms, and GitHub star counts are subject to change over time.
+
+---
+
+<p center>
+  Made with ❤️ for platform engineers, SREs, and cloud-native architects.
+</p>

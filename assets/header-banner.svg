@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1035" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="50%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Drop Shadow for Text Clarity -->
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes dash {
+      to {
+        stroke-dashoffset: -80;
+      }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.3); opacity: 0.9; }
+    }
+    @keyframes floatNode {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    .bg-grid { fill: url(#grid); }
+    .flow-line {
+      stroke: url(#cyanPurple);
+      stroke-width: 2;
+      stroke-dasharray: 10 10;
+      animation: dash 3s linear infinite;
+    }
+    .node-pulse {
+      animation: pulse 3s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .floating-mesh {
+      animation: floatNode 4s ease-in-out infinite;
+    }
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: #FFFFFF;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 19px;
+      fill: #94A3B8;
+    }
+    .badge-pill {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      fill: #38BDF8;
+    }
+  </style>
+
+  <!-- Base Layer: Dark Gradient Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bgGradient)" />
+
+  <!-- Background Grid -->
+  <rect width="1200" height="320" rx="16" class="bg-grid" />
+
+  <!-- DYNAMIC / BACKGROUND MESH GRAPH VISUALS (Placed behind text) -->
+  <g class="floating-mesh" opacity="0.45">
+    <!-- Top & Bottom Flow Connections -->
+    <path d="M 50 60 Q 300 20 600 70 T 1150 40" fill="none" class="flow-line" />
+    <path d="M 80 270 Q 400 310 750 250 T 1120 280" fill="none" class="flow-line" style="animation-duration: 5s;" />
+
+    <!-- Connecting Nodes & Lines -->
+    <line x1="150" y1="70" x2="280" y2="130" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.5" />
+    <line x1="280" y1="130" x2="220" y2="240" stroke="#818CF8" stroke-opacity="0.3" stroke-width="1.5" />
+    <line x1="920" y1="80" x2="1040" y2="160" stroke="#A855F7" stroke-opacity="0.3" stroke-width="1.5" />
+    <line x1="1040" y1="160" x2="960" y2="260" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="1.5" />
+
+    <!-- Node Glow Circles -->
+    <circle cx="150" cy="70" r="14" fill="#06B6D4" class="node-pulse" />
+    <circle cx="150" cy="70" r="6" fill="#E0F2FE" />
+
+    <circle cx="280" cy="130" r="16" fill="#3B82F6" class="node-pulse" style="animation-delay: 1s;" />
+    <circle cx="280" cy="130" r="7" fill="#FFFFFF" />
+
+    <circle cx="220" cy="240" r="12" fill="#818CF8" class="node-pulse" style="animation-delay: 2s;" />
+    <circle cx="220" cy="240" r="5" fill="#EEF2FF" />
+
+    <circle cx="920" cy="80" r="15" fill="#A855F7" class="node-pulse" style="animation-delay: 1.5s;" />
+    <circle cx="920" cy="80" r="6" fill="#FAF5FF" />
+
+    <circle cx="1040" cy="160" r="18" fill="#06B6D4" class="node-pulse" stroke="#38BDF8" stroke-width="2" style="animation-delay: 0.5s;" />
+    <circle cx="1040" cy="160" r="8" fill="#FFFFFF" />
+
+    <circle cx="960" cy="260" r="12" fill="#EC4899" class="node-pulse" style="animation-delay: 2.5s;" />
+    <circle cx="960" cy="260" r="5" fill="#FDF2F8" />
+  </g>
+
+  <!-- Central Glow Effect under Header Text -->
+  <ellipse cx="600" cy="160" rx="380" ry="90" fill="#3B82F6" opacity="0.12" filter="url(#textGlow)" />
+
+  <!-- FOREGROUND LAYER: Title, Subtitle, and Feature Badges (Always Sharp & Unobstructed) -->
+  <g filter="url(#shadow)">
+    <!-- Top Pill Category Badge -->
+    <g transform="translate(600, 75)">
+      <rect x="-140" y="-16" width="280" height="32" rx="16" fill="#1E293B" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.6" />
+      <text x="0" y="5" text-anchor="middle" class="badge-pill">🌐 CLOUD-NATIVE &amp; KUBERNETES</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="152" text-anchor="middle" class="title-text">
+      Awesome Service Mesh Management
+    </text>
+
+    <!-- Subtitle -->
+    <text x="600" y="198" text-anchor="middle" class="subtitle-text">
+      Curated SaaS Platforms &amp; Open-Source Tools for Microservices, mTLS &amp; Traffic Engineering
+    </text>
+
+    <!-- Tag Pills Below Subtitle -->
+    <g transform="translate(600, 248)">
+      <!-- Pill 1: mTLS & Zero Trust -->
+      <g transform="translate(-250, 0)">
+        <rect x="-85" y="-14" width="170" height="28" rx="14" fill="#0F172A" stroke="#06B6D4" stroke-width="1" />
+        <text x="0" y="4" text-anchor="middle" fill="#38BDF8" font-family="sans-serif" font-size="12" font-weight="600">🔒 mTLS &amp; Zero Trust</text>
+      </g>
+      <!-- Pill 2: Traffic Routing -->
+      <g transform="translate(-80, 0)">
+        <rect x="-75" y="-14" width="150" height="28" rx="14" fill="#0F172A" stroke="#818CF8" stroke-width="1" />
+        <text x="0" y="4" text-anchor="middle" fill="#A5B4FC" font-family="sans-serif" font-size="12" font-weight="600">🔀 Traffic Routing</text>
+      </g>
+      <!-- Pill 3: Observability -->
+      <g transform="translate(85, 0)">
+        <rect x="-75" y="-14" width="150" height="28" rx="14" fill="#0F172A" stroke="#A855F7" stroke-width="1" />
+        <text x="0" y="4" text-anchor="middle" fill="#C084FC" font-family="sans-serif" font-size="12" font-weight="600">📊 Observability</text>
+      </g>
+      <!-- Pill 4: eBPF & Sidecarless -->
+      <g transform="translate(255, 0)">
+        <rect x="-85" y="-14" width="170" height="28" rx="14" fill="#0F172A" stroke="#EC4899" stroke-width="1" />
+        <text x="0" y="4" text-anchor="middle" fill="#F472B6" font-family="sans-serif" font-size="12" font-weight="600">⚡ eBPF &amp; Sidecarless</text>
+      </g>
+    </g>
+  </g>
+</svg>
