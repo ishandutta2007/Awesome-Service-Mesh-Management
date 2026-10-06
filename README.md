@@ -2,9 +2,7 @@
 
 # 🌐 Awesome Service Mesh Management
 
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
-[![License: MIT](https://img.shields.to/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.to/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Service-Mesh-Management/pulls)
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a> <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> [![Awesome](https://awesome.re/badge.svg)](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) [![License: MIT](https://img.shields.to/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.to/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Service-Mesh-Management/pulls) <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.to/github/followers/ishandutta2007?label=Follow" /></a>
 
 **Curated Directory of Commercial SaaS Platforms & Open-Source Tools for Microservices, mTLS Encryption & Kubernetes Traffic Engineering.**
 
@@ -26,7 +24,9 @@ This repository serves as an authoritative guide comparing enterprise commercial
 - [🔬 Architecture Paradigms: Sidecar vs. Sidecarless (eBPF & Ambient)](#-architecture-paradigms-sidecar-vs-sidecarless-ebpf--ambient)
 - [🛠️ Observability & Ecosystem Add-ons](#️-observability--ecosystem-add-ons)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Community](#-support--community)
 - [⚖️ Disclaimer & Evaluation Criteria](#️-disclaimer--evaluation-criteria)
+- [⭐ Star History](#-star-history)
 
 ---
 
@@ -136,11 +136,27 @@ Contributions are welcome! Please follow these simple guidelines:
 
 ---
 
+## 💖 Support & Community
+
+Thank you for exploring **Awesome Service Mesh Management**! If you find this curated directory helpful for your team, microservice architecture, or technical research, please consider supporting the project:
+
+- ⭐ **Star this repository** on GitHub to help others discover it.
+- 🔀 **Fork & Share** it with your fellow platform engineers, SREs, and DevOps communities.
+- ☕ **Sponsor / Buy me a coffee**: If you'd like to support ongoing updates and open-source curation, visit the [Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
 ## ⚖️ Disclaimer & Evaluation Criteria
 
 - This directory is **community-curated** for educational and architectural reference.
 - Service mesh platforms introduce operational overhead (certificate rotation, control plane updates, proxy sidecar memory footprint). Evaluate team capacity and benchmark performance before production deployment.
 - Pricing details, free trial terms, and GitHub star counts are subject to change over time.
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Service-Mesh-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Service-Mesh-Management&type=date&legend=top-left)
 
 ---
 
